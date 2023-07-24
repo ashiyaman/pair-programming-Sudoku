@@ -1,0 +1,19 @@
+#container1,
+#container2 {
+  position: relative;
+  outline: 2px solid #000;
+  font-size: 0;
+  margin: auto;
+  height: 320px;
+  width: 320px;
+  padding: 0;
+  border: none;
+}
+
+.grid {
+  margin: auto;
+  padding: 0;
+  border: none;
+  outline: 1px solid #000;
+  display: inline-block;
+}

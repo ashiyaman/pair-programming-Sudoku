@@ -1,5 +1,5 @@
 const container1Div = document.querySelector("#container1");
-const container2Div = document.querySelector("#container2");
+
 
 window.onload = () => {
     // count of div elements to add
@@ -17,5 +17,12 @@ window.onload = () => {
     const newDiv = document.createElement("div");
     newDiv.classList.add("grid", "grid" + index);
     newDiv.style.cssText = "width:33.33%;height:33.33%;";
+    // newDiv.innerHTML = index;
     return newDiv;
   }
+
+  function initialValue(value) {
+    let temp = Math.floor(Math.random() * 9);
+    // document.querySelector(".grid0").innerText = temp;
+  }
+  initialValue();

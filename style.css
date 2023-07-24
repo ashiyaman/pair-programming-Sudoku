@@ -1,8 +1,7 @@
-#container1,
-#container2 {
+#container1{
   position: relative;
   outline: 2px solid #000;
-  font-size: 0;
+  font-size: 1em;
   margin: auto;
   height: 320px;
   width: 320px;

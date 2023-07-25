@@ -1,28 +1,25 @@
-const container1Div = document.querySelector("#container1");
+//to store board inputs and its position
+const selctedValues = [];
+const selectedGrid = [];
 
+//to set initial value
+function setValue(max, min) {
+  let temp = Math.floor((Math.random() * (10 - 1) + 1));
+  let tempGrid = Math.floor((Math.random() * (max - min) + min));
+  let tempDiv = document.querySelector("#grid" + tempGrid);
 
-window.onload = () => {
-    // count of div elements to add
-    const count = 9;
-    for (let x = 0; x < count; x++) {
-      //create new div element
-      const newDiv = createGridElement(x, "container1");
-      // append the new div to container
-      container1Div.appendChild(newDiv);
-    }
-  };
-
-  function createGridElement(index, containerId) {
-    // assign class & style to div
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("grid", "grid" + index);
-    newDiv.style.cssText = "width:33.33%;height:33.33%;";
-    // newDiv.innerHTML = index;
-    return newDiv;
+  //check whether the value is already present or not
+  while (selctedValues.includes(temp)) {
+    temp = Math.floor((Math.random() * (10 - 1) + 1));
   }
+  tempDiv.innerHTML = temp;
 
-  function initialValue(value) {
-    let temp = Math.floor(Math.random() * 9);
-    // document.querySelector(".grid0").innerText = temp;
-  }
-  initialValue();
+  //store the values to the array
+  selctedValues.push(temp);
+  selectedGrid.push(tempGrid);
+  console.log(selctedValues);
+  console.log(selectedGrid);
+}
+//to select 2 random grids 
+setValue(5, 1);
+setValue(10, 5);

@@ -1,18 +1,14 @@
-#container1{
-  position: relative;
-  outline: 2px solid #000;
-  font-size: 1em;
-  margin: auto;
-  height: 320px;
-  width: 320px;
-  padding: 0;
-  border: none;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-.grid {
-  margin: auto;
-  padding: 0;
-  border: none;
-  outline: 1px solid #000;
-  display: inline-block;
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
 }
